@@ -1,0 +1,32 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/office-core",
+    "crates/office-docx",
+    "crates/office-xlsx",
+    "crates/office-pptx",
+    "crates/office-mcp",
+    "xtask",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+anyhow = "1.0.104"
+office_oxide = "0.1.15"
+zip = "2.2.0"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+schemars = "1.2.3"
+rmcp = { version = "3.5.1", features = ["macros", "schemars", "server", "transport-io"] }
+tokio = { version = "1.53.3", features = ["full"] }
+sha2 = "0.10.9"
+base64 = "0.23.1"
+
+office-core = { path = "crates/office-core" }
+office-docx = { path = "crates/office-docx" }
+office-xlsx = { path = "crates/office-xlsx" }
+office-pptx = { path = "crates/office-pptx" }

@@ -1,0 +1,31 @@
+# Real, Office-authored fixture files used by this workspace's tests.
+# Per the office-rs plan's fixture-sourcing policy: only real files with a
+# clear redistribution license, or the user's own files with explicit
+# per-file consent (none have been requested yet, so none are vendored
+# here). Checksums are provided so `cargo xtask fetch-fixtures` can
+# re-derive this exact set and so any drift is caught, not assumed away.
+
+[[fixture]]
+file = "docx_default_template.docx"
+source = "python-docx (MIT) — docx/templates/default.docx, vendored via office-docs-mcp's .venv"
+license = "MIT"
+sha256 = "2094b5bddffe9cf973d61fe03388413804f034160718494a65db7e98da40d35d"
+
+[[fixture]]
+file = "xlsx_h2non_sample.xlsx"
+source = "github.com/h2non/filetype test fixtures (MIT)"
+license = "MIT"
+sha256 = "743508fc5ad51c0898e461712395d40ef9fe7313c46cf4fd85b67dbade531b82"
+
+[[fixture]]
+file = "pptx_h2non_sample.pptx"
+source = "github.com/h2non/filetype test fixtures (MIT)"
+license = "MIT"
+sha256 = "db99baeedae1da608af8c157581da28a5250e5fd59838c38363f84b821e8d588"
+
+# Not yet vendored, found on disk, candidates for Phase 1 (office-legacy):
+#   github.com/gabriel-vasile/mimetype testdata/{doc.doc,xls.xls,ppt.ppt} (MIT)
+# Not vendored at all — the user's own real files under ~/Downloads, a
+# university drive, and various business directories were found during
+# fixture sourcing but are explicitly excluded pending per-file consent
+# (several are clearly personal/client documents).
