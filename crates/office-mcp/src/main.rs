@@ -469,7 +469,7 @@ fn run_arg_to_spec(r: RunArg) -> office_docx::RunSpec {
 impl ServerHandler for OfficeMcp {
     fn get_info(&self) -> ServerConfig {
         ServerConfig::new(ServerCapabilities::builder().enable_tools().build())
-            .with_server_info(Implementation::new("office-mcp", env!("CARGO_PKG_VERSION")))
+            .with_server_info(Implementation::new("inkwell", env!("CARGO_PKG_VERSION")))
     }
 }
 
